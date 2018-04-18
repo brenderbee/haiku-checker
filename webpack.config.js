@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Title Words',
+      title: 'Haiku',
       template: './src/index.html',
       inject: 'body'
     })
