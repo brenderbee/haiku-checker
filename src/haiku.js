@@ -1,3 +1,5 @@
+// export { Haiku };
+
 export class Haiku {
   constructor(input1, input2, input3) {
     this.input1 = input1;
@@ -14,6 +16,15 @@ export class Haiku {
       }
     });
     return count;
+  }
+  subtractSilentVowels(inputWord) {
+    let letters = [];
+    letters = inputWord.split("");
+    if (letters[letters.length-1] === "e"){
+    // if (letters[-1] === "e" && letters[-2].match(/[^aeiouAEIOU]/)){
+      letters.pop();
+    }
+    return letters;
   }
 }
 
