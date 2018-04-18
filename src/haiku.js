@@ -6,6 +6,16 @@ export class Haiku {
     this.input2 = input2;
     this.input3 = input3;
   }
+
+  subtractSilentVowels(inputWord) {
+    let letters = [];
+    letters = inputWord.split("");
+    if (letters[letters.length-1] === "e"){
+      letters.pop();
+    }
+    return letters;
+  }
+
   countVowels(inputWord) {
     let letters = [];
     letters = inputWord.split("");
@@ -17,20 +27,17 @@ export class Haiku {
     });
     return count;
   }
-  subtractSilentVowels(inputWord) {
+
+  removeDip(inputWord) {
     let letters = [];
     letters = inputWord.split("");
-    if (letters[letters.length-1] === "e"){
-    // if (letters[-1] === "e" && letters[-2].match(/[^aeiouAEIOU]/)){
-      letters.pop();
+    let count = 0;
+    for (let i =0; i < letters.length; i++) {
+      if (letters[i].match(/[aeiouAEIOU]/) && letters[i+1].match(/[aeiouAEIOU]/)) {
+        count -= 1;
+      }
     }
-    return letters;
+    return count;
   }
-}
 
-// let haikuTest = new Haiku("word1", "word2", "word3");
-// export function Haiku(input1, input2, input3) {
-//     this.input1 = input1;
-//     this.input2 = input2;
-//     this.input3 = input3;
-// }
+} //end of Haiku class

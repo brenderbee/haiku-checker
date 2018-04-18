@@ -18,14 +18,13 @@ describe('Haiku', function() {
   it('should remove silent "e" vowel at the end of a word', function(){
     let haikuTest = new Haiku("take", "word2", "word3");
     let output = haikuTest.subtractSilentVowels(haikuTest.input1);
-    console.log(output);
     expect(output).toEqual(["t", "a", "k"]);
   });
 
-  // it('test if split is working', function() {
-  //   let haikuTest = new Haiku("word", "word2", "word3");
-  //   let output = haikuTest.countVowels(haikuTest.input1);
-  //   expect(output).toEqual(["w","o","r","d"]);
-  // });
+  it('will subtract 1 vowel for each diphthong in a word', function(){
+    let haikuTest = new Haiku("pain", "word2", "word3");
+    let output = haikuTest.countVowels(haikuTest.input1) + haikuTest.removeDip(haikuTest.input1);
+    expect(output).toEqual(1);
+  });
 
 });
