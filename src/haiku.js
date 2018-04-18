@@ -7,15 +7,6 @@ export class Haiku {
     this.input3 = input3;
   }
 
-  subtractSilentVowels(inputWord) {
-    let letters = [];
-    letters = inputWord.split("");
-    if (letters[letters.length-1] === "e"){
-      letters.pop();
-    }
-    return letters;
-  }
-
   countVowels(inputWord) {
     let letters = [];
     letters = inputWord.split("");
@@ -33,10 +24,25 @@ export class Haiku {
     letters = inputWord.split("");
     let count = 0;
     for (let i =0; i < letters.length; i++) {
-      if (letters[i].match(/[aeiouAEIOU]/) && letters[i+1].match(/[aeiouAEIOU]/)) {
+      if (letters[i].match(/[aeiouAEIOU]/) && letters[i-1].match(/[aeiouAEIOU]/)) {
         count -= 1;
       }
     }
+    return count;
+  }
+
+  subtractSilentVowels(inputSentence) {
+    let words = [];
+    let count = 0;
+    words = inputSentence.split(" ");
+
+    words.forEach(function(word){
+      let letters = [];
+      letters = word.split("");
+      if (letters[letters.length-1] === "e" && letters[letters.length-2].match(/[^aeiouAEIOU]/)) {
+        count -= 1;
+      }
+    });
     return count;
   }
 

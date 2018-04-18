@@ -18,13 +18,27 @@ describe('Haiku', function() {
   it('should remove silent "e" vowel at the end of a word', function(){
     let haikuTest = new Haiku("take", "word2", "word3");
     let output = haikuTest.subtractSilentVowels(haikuTest.input1);
-    expect(output).toEqual(["t", "a", "k"]);
+    expect(output).toEqual(-1);
   });
 
   it('will subtract 1 vowel for each diphthong in a word', function(){
     let haikuTest = new Haiku("pain", "word2", "word3");
-    let output = haikuTest.countVowels(haikuTest.input1) + haikuTest.removeDip(haikuTest.input1);
+    let totalVowels = haikuTest.countVowels(haikuTest.input1);
+    let dips = haikuTest.removeDip(haikuTest.input1);
+    let output = totalVowels + dips;
     expect(output).toEqual(1);
   });
 
+  it('The program will return number of syllables in multiple words', function(){
+    let haikuTest = new Haiku("hello there", "word2", "word3");
+    debugger;
+    let totalVowels = haikuTest.countVowels(haikuTest.input1);
+    console.log(totalVowels);
+    let silentVowels = haikuTest.subtractSilentVowels(haikuTest.input1);
+    console.log(silentVowels);
+    let dips = haikuTest.removeDip(haikuTest.input1);
+    console.log(dips);
+    let output = totalVowels + dips + silentVowels;
+    expect(output).toEqual(3);
+  });
 });
