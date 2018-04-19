@@ -5,8 +5,22 @@
     <title>Haiku</title>
   </head>
   <body>
-    <div class="card">
-      <h2>this is the haiku checker</h2>
+    <div class="container-fluid">
+      <div class="card">
+        <h2>This is The Haiku Checker</h2>
+      </div>
+      <form id="haiku-form">
+        <div id="form-inputs" class="control-group">
+          <input id="sentence1" class="form-control" placeholder="Enter First Sentence" required></input>
+          <input id="sentence2" class="form-control" placeholder="Enter First Sentence"></input>
+          <input id="sentence3" class="form-control" placeholder="Enter First Sentence"></input>
+          </br>
+          <button type="submit" name="button" class="btn btn-outline-info btn-block">Check me!</button>
+        </div>
+        <div class="output">
+          <p id="user-output"></p>
+        </div>
+      </form>
     </div>
   </body>
 </html>

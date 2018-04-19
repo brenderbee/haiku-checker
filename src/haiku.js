@@ -1,6 +1,6 @@
 // export { Haiku };
 
-export class Haiku {
+class Haiku {
   constructor(input1, input2, input3) {
     this.input1 = input1;
     this.input2 = input2;
@@ -47,3 +47,5 @@ export class Haiku {
   }
 
 } //end of Haiku class
+
+export { Haiku };
