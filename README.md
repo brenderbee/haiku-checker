@@ -4,13 +4,13 @@
 
 #### By: _**Julia Sheremet and Brenda Franco**_
 
-## <span style="color:#efad8b;">Description</span>
+## <span style="color:#74875d;">Description</span>
 
 _This webpage application is designed to take the a poem from the user and return whether in fact the poem is a haiku. To understand what a kaiku is please feel free to reference this <a href="https://en.wikipedia.org/wiki/Haiku">link</a>._
 
 _This project uses Webpack to bundle and minify the code. The test runner is Karma and the syntax flavor is Jasmine. Babel is used to transpile ES6. All dependencies required are included in this project._
 
-## <span style="color:#efad8b;">Setup/Installation Requirements</span>
+## <span style="color:#74875d;">Setup/Installation Requirements</span>
 
 * Clone repository on your local computer.
 * If you already have Node, Homebrew, and Karma installed, then skip to "Install Dependencies."
@@ -48,11 +48,11 @@ _This project uses Webpack to bundle and minify the code. The test runner is Kar
     * $ npm test
 
 
-## <span style="color:#efad8b;">Known Bugs</span>
+## <span style="color:#74875d;">Known Bugs</span>
 
 _Feel free to email either me at [juliajessicasher@gmail.com](mailto:juliajessicasher@gmail.com) if you run into any issues or have questions, ideas or concerns. Please enjoy and feel free to share your opinion, constructive criticism, or comments of my work._
 
-## <span style="color:#efad8b;">Technologies Used</span>
+## <span style="color:#74875d;">Technologies Used</span>
 
 | Development dependencies | Front end dependencies |
 | :------------ | :------------- |
@@ -65,7 +65,7 @@ _Feel free to email either me at [juliajessicasher@gmail.com](mailto:juliajessic
 
 
 
-### <span style="color:#efad8b;">Specs</span>
+### <span style="color:#74875d;">Specs</span>
 | Behavior | Input | Output |
 | :-------------     | :------------- | :------------- |
 | The program will verify if the poem has three lines | Input: "three sentences" | Output: true |
@@ -76,7 +76,7 @@ _Feel free to email either me at [juliajessicasher@gmail.com](mailto:juliajessic
 | The program will return number of vowels in multiple words | Input1: "When breaking the fast" Input2: "As the sun heads to the west" Input3: "The sweet taste of dates"| Output: [3,7,3] |
 
 
-### <span style="color:#efad8b;">License</span>
+### <span style="color:#74875d;">License</span>
 
 Copyright (c) 2018 ****_Julia Sheremet and Brenda Franco_****
 
