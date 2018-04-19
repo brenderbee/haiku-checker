@@ -26,7 +26,7 @@ _Feel free to email either me at [juliajessicasher@gmail.com](mailto:juliajessic
 * _Git_
 * _GitHub_
 * _Webpack_
-* _Karma and Karma_
+* _Karma and Jasmine_
 * _Babel_
 
 ### Specs
@@ -37,6 +37,7 @@ _Feel free to email either me at [juliajessicasher@gmail.com](mailto:juliajessic
 | The program will subtract a silent 'e' at the end of a word (a vowel preceded by a consonant) | Input: "take" | Output: "1" |
 | The program will subtract 1 vowel for each diphthong in a word | Input: "pain" | Output: "1" |
 | The program will return number of vowels in multiple words | Input: "hello there" | Output: "3" |
+| The program will return number of vowels in multiple words | Input1: "When breaking the fast" Input2: "As the sun heads to the west" Input3: "The sweet taste of dates"| Output: [3,7,3] |
 
 
 ### License
