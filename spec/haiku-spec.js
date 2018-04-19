@@ -33,12 +33,22 @@ describe('Haiku', function() {
     let haikuTest = new Haiku("hello there", "word2", "word3");
     debugger;
     let totalVowels = haikuTest.countVowels(haikuTest.input1);
+    let silentVowels = haikuTest.subtractSilentVowels(haikuTest.input1);
+    let dips = haikuTest.removeDip(haikuTest.input1);
+    let output = totalVowels + dips + silentVowels;
+    expect(output).toEqual(3);
+  });
+
+  it('The program will return number of syllables in multiple words', function(){
+    let haikuTest = new Haiku("I am first with five", "word2", "word3");
+    debugger;
+    let totalVowels = haikuTest.countVowels(haikuTest.input1);
     console.log(totalVowels);
     let silentVowels = haikuTest.subtractSilentVowels(haikuTest.input1);
     console.log(silentVowels);
     let dips = haikuTest.removeDip(haikuTest.input1);
     console.log(dips);
     let output = totalVowels + dips + silentVowels;
-    expect(output).toEqual(3);
+    expect(output).toEqual(5);
   });
 });
